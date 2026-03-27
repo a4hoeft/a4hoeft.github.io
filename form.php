@@ -1,0 +1,42 @@
+<?php
+if(isset($_REQUEST['message'])){
+$to = "ahoeft1@student.morainepark.edu";
+$subject = "Form Submission";
+$first_name = $_REQUEST["first_name"];
+$last_name = $_REQUEST["last_name"];
+$message = $_REQUEST["message"];
+
+
+//sending the mail
+mail($to, $subject, $first_name, $last_name, $message);
+
+//email response
+//echo "Thank you for contacting us";
+
+// SENDING TO DIFFERNT LOCATION
+header("Location: https://www.morainepark.edu/");
+
+/// SENDING TO DIFFERNT LOCATION after a delay of 5 seconds
+//header("refresh:5;url=https://www.morainepark.edu/");
+}?>
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+</head>
+<body>
+    <form  method="post">
+        <h2>Contact Us</h2>
+        <input type="text" name="first_name" placeholder="FirstName" required>
+     <br>
+        <input type="text" name="last_name" placeholder="LastName" required>
+        <br>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
