@@ -1,0 +1,15 @@
+
+<html>
+<head>
+    <title>PHP Test</title>
+</head>
+<body>
+    <h1>PHP Test</h1>
+    <p>
+        <?php
+            echo "Hello, World!";
+        ?>
+    </p>
+</body>
+
+</html>
